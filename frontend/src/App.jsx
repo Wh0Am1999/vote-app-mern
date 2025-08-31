@@ -7,6 +7,7 @@ import Register from './pages/Register.jsx'
 import PollList from './pages/PollList.jsx'
 import PollForm from './pages/PollForm.jsx'
 import PollResult from './pages/PollResult.jsx'
+import Footer from './components/Footer.jsx'
 import { getToken } from './services/api.js'
 
 function Protected({ children }) {
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
+      <Footer />
     </>
   )
 }

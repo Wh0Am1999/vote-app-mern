@@ -89,16 +89,16 @@ export default function Nav() {
         )}
       </ul>
 
-      {/* Avatar: Div mit background-image für sauberes Cropping */}
-      <div className="nav-avatar-container" title={user?.username || ''}>
-        {authed && user?.avatarUrl ? (
+      {/* Avatar nur, wenn eingeloggt UND avatarUrl existiert */}
+      {authed && user?.avatarUrl ? (
+        <div className="nav-avatar-container" title={user?.username || ''}>
           <div
             className="nav-avatar-bg"
             aria-label={user.username || 'User'}
             style={{ backgroundImage: `url(${user.avatarUrl})` }}
           />
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </nav>
   )
 }
